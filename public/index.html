@@ -13,35 +13,49 @@
 </head>
 
 <body>
-    <div class="uk-container uk-align-center uk-margin-remove uk-padding-remove">
+    <div class="">
         <!-- ============== NAVBAR ============== -->
-        <div>
-          <nav data-uk-sticky class="uk-navbar uk-navbar-attached">
-            <a href="#home" class="uk-navbar-brand" data-uk-smooth-scroll>DH</a>
-            <ul class="uk-navbar-nav">
-              <li><a class="nav-choice" href="#about" data-uk-smooth-scroll>ABOUT</a></li>
-              <li><a class="nav-choice" href="#portfolio" data-uk-smooth-scroll>PORTFOLIO</a></a>
-              </li>
-            </ul>
-            <div data-uk-button-checkbox class="uk-navbar-flip uk-parent uk-navbar-content">
-              <!-- <ul class="uk-navbar-nav uk-navbar-content">
+        <div class="">
+            <nav data-uk-sticky class="uk-navbar uk-navbar-attached">
+                <ul class="uk-navbar-nav">
+                  <a href="#home" class="uk-navbar-brand uk-visible" data-uk-smooth-scroll>DH</a>
+                    <li><a class="nav-choice" href="#about" data-uk-smooth-scroll>ABOUT</a></li>
+                    <li><a class="nav-choice" href="#portfolio" data-uk-smooth-scroll>PORTFOLIO</a></a>
+                    </li>
+                </ul>
+                <div data-uk-button-checkbox class="uk-navbar-flip uk-parent uk-navbar-content">
+                    <!-- <ul class="uk-navbar-nav uk-navbar-content">
               <li class="uk-parent"> -->
-              <a class="contact-button uk-button uk-button-large uk-button-primary" href="#contact" data-uk-smooth-scroll>CONTACT</a>
-              <!-- </li>
+                    <a class="contact-button uk-button uk-button-large uk-button-primary" href="#contact" data-uk-smooth-scroll>CONTACT</a>
+                    <!-- </li>
             </ul> -->
-          </nav>
+                </div>
+              <!-- <a href="#home" class="uk-navbar-brand uk-navbar-center" data-uk-smooth-scroll>DH</a> -->
+            </nav>
         </div>
 
+        <div class="container" >
         <!-- ============== LANDING PAGE ============== -->
-        <div class="uk-height-viewport uk-grid landing uk-margin-remove uk-padding-remove" id="home">
-            <!-- <div class="uk-block uk-block-default uk-width-1-1 uk-flex uk-flex-middle">
-                <p>
-                    Here's some text, let's see what this does
-                </p>
-            </div> -->
+        <div class="uk-height-viewport landing uk-margin-remove uk-padding-remove" id="home">
+          <div class="uk-block welcome uk-block-default">
+            <h1 class="">DOMINIQUE HORNER</h1>
+            <h4>
+              Software Engineer | Web Developer
+            </h4>
+            <h4>
+              Psych Major | Francophone | Entrepreneur |  Traveler  | Big Sister
+            </h4>
+          </div>
+          <a href="#about" data-uk-smooth-scroll>
+          <svg class="arrows">
+							<path class="a1" d="M0 0 L30 32 L60 0"></path>
+							<path class="a2" d="M0 20 L30 52 L60 20"></path>
+							<path class="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
+          </a>
         </div>
         <!-- ============== ABOUT ============== -->
-        <div class="uk-cover uk-height-viewport" id="about">
+        <div class="uk-height-viewport landing uk-margin-remove uk-padding-remove" id="about">
             <img class="" src="./images/sky.jpeg" width="" height="" alt="">
         </div>
 
@@ -57,11 +71,11 @@
             </video>
         </div>
         <!-- ============== SCRIPT TAGS ============== -->
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="./js/uikit.js"></script>
-        <script type="text/javascript" src="./js/components/sticky.min.js"></script>
-        <script type="text/javascript" src="./js/components/parallax.js"></script>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./js/uikit.js"></script>
+    <script type="text/javascript" src="./js/components/sticky.min.js"></script>
 </body>
 
 </html>
