@@ -1307,13 +1307,13 @@ iframe {
 /* Sub-object: `uk-panel-title`
  ========================================================================== */
 .uk-panel-title {
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 24px;
   font-weight: normal;
   text-transform: none;
-  color: #444;
+  color: grey;
 }
 /* Sub-object: `uk-panel-badge`
  ========================================================================== */
@@ -2017,11 +2017,11 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   text-decoration: none;
   /* 1 */
   height: 65px;
-  padding: 0 40px;
+  padding: 0 2vw;
   line-height: 65px;
   /* 2 */
   color: black;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Playfair Display', serif;
   font-weight: normal;
 }
@@ -2083,7 +2083,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   box-sizing: border-box;
   display: block;
   height: 65px;
-  padding: 0 10px 0px 50px;
+  padding: 0 2vw 0px 5vw;
   float: left;
 }
 /*
@@ -2117,7 +2117,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Sub-objects: `uk-navbar-brand`
  ========================================================================== */
 .uk-navbar-brand {
-  font-size: 35px;
+  font-size: 28px;
   color: black;
   text-decoration: none;
 }
@@ -2179,9 +2179,23 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Sub-object: `uk-navbar-flip`
  ========================================================================== */
 .uk-navbar-flip {
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+  height: 60px;
+  padding: 0 5vw 0px 2vw;
+  line-height: 60px;
   float: right;
-  padding-right: 40px;
 }
+@media (max-width: 480px) {
+  .uk-navbar-flip {
+    padding-right:20px;
+  }
+  .uk-navbar-toggle {
+    padding: 0 10px 0px 20px;
+  }
+}
+
 /* ========================================================================
    Component: Subnav
  ========================================================================== */
@@ -3490,7 +3504,7 @@ select.uk-form-width-mini {
   /* 7 */
   display: inline-block;
   box-sizing: border-box;
-  padding: 0 12px;
+  padding: 0 0px;
   background: #eee;
   vertical-align: middle;
   /* 8 */
@@ -3638,11 +3652,21 @@ select.uk-form-width-mini {
   line-height: 25px;
   font-size: 12px;
 }
+.uk-button-medium {
+  min-height: 32px;
+  padding: 0 10px;
+  line-height: 32px;
+  font-size: 1.2rem;
+}
+.uk-button-medium:hover{
+background-color: white;
+color: #e05974;
+}
 .uk-button-large {
-  min-height: 40px;
+  min-height: 35px;
   padding: 0 25px;
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 35px;
+  font-size: 18px;
 }
 /* Sub-object `uk-button-group`
  ========================================================================== */
@@ -4343,6 +4367,7 @@ select.uk-form-width-mini {
 .uk-icon-reorder:before,
 .uk-icon-bars:before {
   content: "\f0c9";
+  padding-right: 2px;
 }
 .uk-icon-list-ul:before {
   content: "\f0ca";
@@ -7657,10 +7682,10 @@ a.uk-thumbnail:focus {
  ========================================================================== */
 .uk-offcanvas .uk-panel {
   margin: 20px 15px;
-  color: #777;
+  color: #fff;
 }
 .uk-offcanvas .uk-panel-title {
-  color: #ccc;
+  color: #fff;
 }
 .uk-offcanvas .uk-panel a:not([class]) {
   color: #ccc;

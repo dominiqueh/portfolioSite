@@ -12,6 +12,12 @@
     -webkit-box-shadow: inset 0 0 10px #eaeced;
     box-shadow: inset 0 0 10px #eaeced;
 }
+.menu{
+  vertical-align: middle !important;
+      margin: 25px;
+      background: white;
+      font-size: 1.3rem;
+}
 .contact-button {
     color: #fff;
     background-color: #e05974;
@@ -99,7 +105,7 @@ top: 35%;
   background-position: 0 0px;
 }
 .about{
-  top:60%
+  top:30%
 }
 
 /*  ============== PORTFOLIO ============== */
@@ -109,6 +115,6 @@ top: 35%;
   background-repeat: no-repeat;
   background-position: 0 0px;
 }
-.portfolio{
-  top:35%;
+.portfolio {
+  top:50%;
 }

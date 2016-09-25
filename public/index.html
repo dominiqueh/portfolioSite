@@ -15,27 +15,42 @@
 <body>
     <div class="">
         <!-- ============== NAVBAR ============== -->
-        <div class="">
-            <nav data-uk-sticky class="uk-navbar uk-navbar-attached">
-                <ul class="uk-navbar-nav">
-                    <a href="#home" class="uk-navbar-brand uk-visible" data-uk-smooth-scroll>DH</a>
-                    <li><a class="nav-choice" href="#about" data-uk-smooth-scroll>ABOUT</a></li>
-                    <li><a class="nav-choice" href="#portfolio" data-uk-smooth-scroll>PORTFOLIO</a></a>
-                    </li>
+        <nav data-uk-sticky class="uk-navbar uk-navbar-attached">
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <a href="#home" class="uk-navbar-brand uk-visible" data-uk-smooth-scroll>DH</a>
+                <li><a class="nav-choice" href="#about" data-uk-smooth-scroll>ABOUT</a></li>
+                <li><a class="nav-choice" href="#portfolio" data-uk-smooth-scroll>PORTFOLIO</a></a>
+                </li>
+            </ul>
+            <button class="uk-button uk-button-medium uk-visible-small menu" data-uk-offcanvas="{target:'#my-id'}"><i class="uk-icon-bars uk-icon-medium"></i> MENU</button>
+            <!-- ============== CONTACT BUTTON ============== -->
+            <div data-uk-button-checkbox class="uk-navbar-flip uk-parent uk-navbar-content">
+                <a class="uk-hidden-small contact-button uk-button uk-button-large uk-button-primary" href="#contact" data-uk-smooth-scroll>CONTACT</a>
+                <a class="uk-visible-small contact-button uk-button uk-button-medium uk-button-primary" href="#contact" data-uk-smooth-scroll>CONTACT</a>
+            </div>
+            <!-- ============== MOBILE PANEL ============== -->
+        </nav>
+        <div id="my-id" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+              <div class="uk-panel">
+                <h3 class="uk-panel-title">Welcome //</h3>
+                <p>
+                  Clicking the links below will help<br />
+                  navigate you through the site<br />
+                </p>
+              </div>
+                <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+                  <li class="uk-nav-divider"><a href="#home" data-uk-smooth-scroll>HOME</a></li>
+                  <li class="uk-nav-divider"><a href="#about" data-uk-smooth-scroll>ABOUT</a></li>
+                  <li class="uk-nav-divider"><a href="#portfolio" data-uk-smooth-scroll>PORTFOLIO</a></li>
+                  <li class="uk-nav-divider"><a href="#contact" data-uk-smooth-scroll>CONTACT</a></li>
                 </ul>
-                <div data-uk-button-checkbox class="uk-navbar-flip uk-parent uk-navbar-content">
-                    <!-- <ul class="uk-navbar-nav uk-navbar-content">
-              <li class="uk-parent"> -->
-                    <a class="contact-button uk-button uk-button-large uk-button-primary" href="#contact" data-uk-smooth-scroll>CONTACT</a>
-                    <!-- </li>
-            </ul> -->
-                </div>
-                <!-- <a href="#home" class="uk-navbar-brand uk-navbar-center" data-uk-smooth-scroll>DH</a> -->
-            </nav>
+            </div>
         </div>
 
         <div class="container">
             <!-- ============== LANDING PAGE ============== -->
+            <div>
             <div class="uk-height-viewport welcome-container uk-margin-remove uk-padding-remove" id="home">
                 <div class="uk-block welcome uk-block-default">
                     <h1 class="">DOMINIQUE HORNER</h1>
@@ -54,18 +69,28 @@
                     </svg>
                 </a>
             </div>
+              </div>
             <!-- ============== ABOUT ============== -->
             <div class="uk-height-viewport about-container uk-margin-remove uk-padding-remove" id="about">
                 <div class="uk-block about uk-block-default">
-                    <h1 class="">ABOUT ME</h1>
-                    <h4 class="pinkify">
-              Software Engineer / Web Developer
-            </h4>
-                    <h4 class="pinkify">
-              Psych Major / Francophone / Entrepreneur /  Traveler  / Big Sister
-            </h4>
+                    <h1 class="">Who am I?</h1>
+                    <div class="uk-grid">
+                    <div class="uk-width-medium-1-2">
+                    <div class="uk-panel">
+                    <p>
+                      A person of dual identities. Born and raised in New York city, with childhood memories of bypassing skyscrapers on walks to Central Park with my mother and getting knishes from Pete the Hot Dog Man for lunch. These memories stand beside those of England's countryside where I'd attempt to clothe the free-roaming cows of the New Forest with a Yankees hat while on holiday visiting relatives.</p>
+                    </div>
+                  </div>
+                    <div class="uk-width-medium-1-2">
+                    <div class="uk-panel">
+                      <p>
+                      A technological unicorn, my educational background is a dual-major of Psychology and French language as well as well as certificates in web development. While studying psychology and French, I was driven by a fascination in learning the systems by which we make decisions and communicate. After taking a certificate course at NYU, I found that programming incorporated all the elements that I loved from both fields while providing the cognitive challenge I relish and want out of a job.
+                    </p>
                 </div>
+              </div>
             </div>
+</div>
+</div>
 
             <!-- ============== PORTFOLIO ============== -->
             <div class="uk-height-viewport portfolio-container uk-margin-remove uk-padding-remove" id="portfolio">
