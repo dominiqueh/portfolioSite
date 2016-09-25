@@ -27,7 +27,7 @@
     box-shadow: 0 2px #6d3144;
     transform: translateY(5px);
 }
-.landing {
+.welcome-container {
     background-image: url(../../images/desk.jpeg);
     background-size:cover;
     background-repeat: no-repeat;
@@ -41,13 +41,16 @@ top: 35%;
   /*margin-left: 5vw;
   margin-right: 5vw;*/
 }
+.pinkify {
+  color: #e05974;
+}
 .arrows {
 	width: 60px;
 	height: 72px;
 	position: absolute;
 	left: 50%;
 	margin-left: -30px;
-	bottom: 25px;
+	bottom: 40px;
 }
 
 .arrows path {
@@ -88,4 +91,24 @@ top: 35%;
 	animation-delay:0s;
 	-webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
-/*  ======= ABOUT ======= */
+/*  ============== ABOUT ============== */
+.about-container{
+  background-image: url(../../images/sky.jpeg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: 0 0px;
+}
+.about{
+  top:60%
+}
+
+/*  ============== PORTFOLIO ============== */
+.portfolio-container{
+  background-image: url(../../images/typewriter.jpeg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: 0 0px;
+}
+.portfolio{
+  top:35%;
+}

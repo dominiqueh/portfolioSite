@@ -2021,7 +2021,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   line-height: 65px;
   /* 2 */
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Playfair Display', serif;
   font-weight: normal;
 }
@@ -2135,7 +2135,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Sub-object: `uk-navbar-toggle`
  ========================================================================== */
 .uk-navbar-toggle {
-  font-size: 18px;
+  font-size: 20px;
   color: #444;
   text-decoration: none;
 }
@@ -3768,7 +3768,7 @@ select.uk-form-width-mini {
   background: #eee;
   line-height: 35px;
   color: #444;
-  font-size: 18px;
+  size: 18px;
   text-align: center;
 }
 /*
@@ -6031,7 +6031,10 @@ a.uk-thumbnail:focus {
  ========================================================================== */
 .uk-thumbnail-caption {
   padding-top: 4px;
+  padding-bottom: 4px;
   text-align: center;
+  letter-spacing: .3em;
+  font-size: 1.8em;
   color: #444;
 }
 /* Sizes
@@ -6104,7 +6107,8 @@ a.uk-thumbnail:focus {
   left: 0;
   right: 0;
   /* 2 */
-  padding: 20px;
+  padding: 20%;
+  font-size: 2.2em;
   color: #fff;
 }
 /*
