@@ -1468,7 +1468,7 @@ iframe {
 /* Phone landscape and bigger */
 @media (min-width: 768px) {
   .uk-block {
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 50px;
   }
 }

@@ -42,17 +42,17 @@ app.get("/", function(req, res) {
 })
 
 // SENDGRID
-// app.post("/sendMessage", function (req, res) {
-// 	var payload = req.body
-// 	payload.to = "dominiquehorner@gmail.com"
-// 	sendgrid.send(payload,function (err,json) {
-// 		if (err) {
-// 			return res.send("FAIL")
-// 		} else {
-// 			res.send("SUCCESS!!!")
-// 		}
-// 	})
-// })
+app.post("/sendMessage", function (req, res) {
+	var payload = req.body
+	payload.to = "dominiquehorner@gmail.com"
+	sendgrid.send(payload,function (err,json) {
+		if (err) {
+			return res.send("FAIL")
+		} else {
+			res.send("SUCCESS!!!")
+		}
+	})
+})
 
 // =+==+==+==+==+==+==+==+==+==+==+==+==
 // Creating Server and Listening for Connections
