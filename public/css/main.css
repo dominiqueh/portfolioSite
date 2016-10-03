@@ -38,25 +38,34 @@
     background-size:cover;
     background-repeat: no-repeat;
     background-position: 0 0px;
+    text-align: center;
 }
 /*  ======= LANDING ======= */
 .welcome{
-top: 35%;
+top: 32%;
 }
 .container{
   /*margin-left: 5vw;
   margin-right: 5vw;*/
 }
 .pinkify {
-  color: #e05974;
+  color: #e23d5e;
 }
+.blacken {
+  color: black;
+  display: inline-block;
+}
+.typewrite{
+  display: inline-block;
+}
+
 .arrows {
 	width: 60px;
 	height: 72px;
 	position: absolute;
 	left: 50%;
 	margin-left: -30px;
-	bottom: 40px;
+	bottom: 60px;
 }
 
 .arrows path {
@@ -99,13 +108,18 @@ top: 35%;
 }
 /*  ============== ABOUT ============== */
 .about-container{
-  background-image: url(../../images/sky2.jpeg);
-  background-size:cover;
+  /*background-image: url(../../images/sky2.jpeg);
+  background-size:cover;*/
+  /*background-color: white;*/
   background-repeat: no-repeat;
   background-position: 0 0px;
+  /*margin: 10vw 10vw;*/
+  color: #5f5f6b;
 }
 .about{
-  top:30%
+}
+.unicorn{
+  margin: 5vw 3vw 5vw 3vw
 }
 
 /*  ============== PORTFOLIO ============== */
@@ -116,5 +130,16 @@ top: 35%;
   background-position: 0 0px;
 }
 .portfolio {
-  top:50%;
+  top:30%;
+}
+.contactText{
+  padding-right: 10px;
+}
+.vr{
+    width:10px;
+    background-color:#b4c3c0;
+    top:0;
+    bottom:0;
+    left:150px;
+    margin: 10px 30px;
 }

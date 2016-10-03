@@ -1339,6 +1339,8 @@ iframe {
   padding: 15px;
   background: #f5f5f5;
   color: #444;
+  border-radius: 1px;
+  border-style: solid;
 }
 .uk-panel-box-hover:hover {
   color: #444;
@@ -1378,7 +1380,9 @@ iframe {
  * Sub-modifier: `uk-panel-box-secondary`
  */
 .uk-panel-box-secondary {
-  background-color: #eee;
+  background-color: white;
+  border: solid #f9f0e5 1px;
+  border-radius: 1px;
   color: #444;
 }
 .uk-panel-box-secondary-hover:hover {
@@ -1386,6 +1390,7 @@ iframe {
 }
 .uk-panel-box-secondary .uk-panel-title {
   color: #444;
+  font-weight: 500;
 }
 /* Modifier: `uk-panel-hover`
  ========================================================================== */
@@ -1412,6 +1417,7 @@ iframe {
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
   color: #444;
+  text-align: center;
 }
 /* Modifier: `uk-panel-space`
  ========================================================================== */

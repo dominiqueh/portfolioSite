@@ -7,7 +7,7 @@ var express = require('express'),
     logger = require('morgan'),
     cors = require('cors'),
     path = require('path'),
-    port = process.env.PORT || 3000,
+    port = process.env.PORT || 1337,
     mongoose = require('mongoose'),
     sendgrid = require('sendgrid')('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')
 
