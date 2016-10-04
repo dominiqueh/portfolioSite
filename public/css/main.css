@@ -61,7 +61,7 @@ top: 32%;
 
 .arrows {
 	width: 60px;
-	height: 72px;
+	height: 90px;
 	position: absolute;
 	left: 50%;
 	margin-left: -30px;
@@ -71,7 +71,7 @@ top: 32%;
 .arrows path {
 	stroke: #ff6d8a;
 	fill: transparent;
-	stroke-width: 5px;
+	stroke-width: 15px;
 	animation: arrow 2s infinite;
 	-webkit-animation: arrow 2s infinite;
 }
