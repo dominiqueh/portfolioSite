@@ -69,7 +69,7 @@ top: 32%;
 }
 
 .arrows path {
-	stroke: #fff;
+	stroke: #ff6d8a;
 	fill: transparent;
 	stroke-width: 5px;
 	animation: arrow 2s infinite;
