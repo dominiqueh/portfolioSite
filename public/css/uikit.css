@@ -3007,12 +3007,12 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 1 */
   box-sizing: border-box;
   /* 2 */
-  margin: 0;
+  margin: auto;
   /* 3 */
-  border-radius: 0;
+  border-radius: 5px;
   /* 4 */
   font: inherit;
-  color: inherit;
+  color: white;
 }
 /*
  * Address inconsistent `text-transform` inheritance which is only inherit in Firefox

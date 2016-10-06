@@ -201,14 +201,15 @@
                 <!-- ============== CONTACT - text ============== -->
                 <div class="uk-text-middle contactText">
                     <h2>Let's go places</h2>
+                    <br />
                     <p>
                         Want to work together or collaborate on a project? </br>
                     Feel free to send me
                     an e-mail inquiry at: </br></p>
                   <h4 class="pinkify"><i>dominiquehorner@gmail.com </i><br /></h4>
-    <p>
+    <p><br />
                   or</br>
-                 you can use the form to the right</p>
+                 you can use the form to the right </p>
 
 
                 </div>
@@ -216,21 +217,21 @@
                 <div class="vr">
                 </div>
                 <!-- ============== CONTACT - form ============== -->
-                <form method="post" ng-submit="sendMessage(name,email,message)" id="form">
+                <form method="post" ng-submit="sendMessage(name,email,message)" class="uk-form" id="form">
                     <div class="name" id="contact-content">
-                        <label for="name" class="required">Name:</label>
-                        <input type="text" placeholder="Enter your name" name="name" id="name" required title="Please enter your name" ng-model="name" />
+                        <label for="name" class="required">Name //</label>
+                        <input type="text" class="uk-width-1-1" placeholder="Enter your name" name="name" id="name" required title="Please enter your name" ng-model="name" />
                     </div>
                     <div class="email">
-                        <label for="email" class="required">Email:</label>
-                        <input type="email" placeholder="you@example.com" name="email" id="email" required ng-model="email" />
+                        <label for="email" class="required">Email //</label>
+                        <input class="uk-width-1-1" type="email" placeholder="you@example.com" name="email" id="email" required ng-model="email" />
                     </div>
                     <div class="message">
-                        <label for="bio">Message or Inquiry:</label>
-                        <textarea name="message" id="message" rows="5" cols="30" ng-model="message"></textarea>
-                        <div class="submit">
-                            <input type="submit" />
-                        </div>
+                        <label for="bio">Message //</label><br />
+                        <textarea name="message" id="message" rows="5" cols="30" ng-model="message" class="uk-width-1-1" placeholder="Message content goes here.. "></textarea>
+                      </div>
+                    <div >
+                            <input type="submit" class="contact-button uk-width-2-5 submitToMe uk-align-center"/>
                     </div>
                 </form>
             </div>

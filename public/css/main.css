@@ -58,6 +58,10 @@ top: 32%;
 .typewrite{
   display: inline-block;
 }
+.submitToMe{
+  text-transform: uppercase;
+  outline:none;
+}
 
 .arrows {
 	width: 60px;
@@ -71,7 +75,7 @@ top: 32%;
 .arrows path {
 	stroke: #ff6d8a;
 	fill: transparent;
-	stroke-width: 15px;
+	stroke-width: 10px;
 	animation: arrow 2s infinite;
 	-webkit-animation: arrow 2s infinite;
 }
@@ -140,6 +144,6 @@ top: 32%;
     background-color:#b4c3c0;
     top:0;
     bottom:0;
-    left:150px;
-    margin: 10px 30px;
+    left:170px;
+    margin: 10px 50px;
 }
