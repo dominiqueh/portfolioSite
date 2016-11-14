@@ -18,21 +18,21 @@
       background: white;
       font-size: 1.3rem;
 }
-.contact-button {
+/*.contact-button {
     color: #fff;
     background-color: #e05974;
     border: none;
     border-radius: 15px;
     box-shadow: 0 5px #6d3144;
-}
-.contact-button:hover {
+}*/
+/*.contact-button:hover {
     background-color: #e05974;
 }
 .contact-button:active {
     background-color: #e05974;
     box-shadow: 0 2px #6d3144;
     transform: translateY(5px);
-}
+}*/
 .welcome-container {
     background-image: url(../../images/desk.jpeg);
     background-size:cover;
@@ -73,7 +73,7 @@ top: 32%;
 }
 
 .arrows path {
-	stroke: #ff6d8a;
+	stroke: #f10d62;
 	fill: transparent;
 	stroke-width: 10px;
 	animation: arrow 2s infinite;
@@ -123,7 +123,9 @@ top: 32%;
 .about{
 }
 .unicorn{
-  margin: 5vw 3vw 5vw 3vw
+  /*margin: 5vw 3vw 5vw 3vw;*/
+  /*justify-content: center;
+  align-content: center;*/
 }
 
 /*  ============== PORTFOLIO ============== */
@@ -136,9 +138,14 @@ top: 32%;
 .portfolio {
   top:30%;
 }
+/*  ============== CONTACT ============== */
 .contactText{
   padding-right: 10px;
 }
+label{
+  text-transform: uppercase;
+}
+
 .vr{
     width:1px;
     background-color:#b4c3c0;
