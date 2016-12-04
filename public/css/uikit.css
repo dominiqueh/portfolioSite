@@ -3013,7 +3013,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 4 */
   font: inherit;
   color: white;
-  background-color: #f4778a;
+  background-color: #db5973;
 }
 /*
  * Address inconsistent `text-transform` inheritance which is only inherit in Firefox
@@ -3525,7 +3525,7 @@ select.uk-form-width-mini {
 /* Hover */
 .uk-button-primary:hover,
 .uk-button-primary:focus {
-  background-color: #e23d5e;
+  background-color: #e5879a;
   color: #ffffff;
 }
 /* Active */
@@ -8708,7 +8708,7 @@ a.uk-thumbnail:focus {
 }
 .uk-contrast .uk-button-primary:hover,
 .uk-contrast .uk-button-primary:focus {
-  background-color: #e23d5e;
+  background-color: #e5879a;
   color: #fff;
 }
 .uk-contrast .uk-button-primary:active,
