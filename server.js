@@ -43,7 +43,7 @@ app.get("/", function(req, res) {
 
 // SENDGRID
 app.post("/sendMessage", function (req, res) {
-	var payload = req.body
+	var payload = req.body;
 	payload.to = "dominiquehorner@gmail.com"
 	sendgrid.send(payload,function (err,json) {
 		if (err) {
