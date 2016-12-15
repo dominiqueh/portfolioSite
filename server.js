@@ -54,11 +54,11 @@ app.use(express.static(path.join(__dirname, './public')))
 // Gets and Posts
 //  =+==+==+==+==+==+==+==+==+==+==+==+==
 
-// app.get("/", function(req, res) {
-//     res.sendFile('/index.html', {
-//         root: "../public/index.html"
-//     })
-// })
+app.get("/", function(req, res) {
+    res.sendFile('/index.html', {
+        root: "../public/index.html"
+    })
+})
 
 // SENDGRID
 // app.post("/sendMessage", function (req, res) {
@@ -78,7 +78,7 @@ app.use(express.static(path.join(__dirname, './public')))
 var helper = require('sendgrid').mail
   
 from_email = new helper.Email("test@example.com")
-to_email = new helper.Email("test@example.com")
+to_email = new helper.Email("dominiquehorner@gmail.com")
 subject = "Sending with SendGrid is Fun"
 content = new helper.Content("text/plain", "and easy to do anywhere, even with Node.js")
 mail = new helper.Mail(from_email, subject, to_email, content)
@@ -86,7 +86,7 @@ mail = new helper.Mail(from_email, subject, to_email, content)
 var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 var request = sg.emptyRequest({
   method: 'POST',
-  path: '/v3/mail/send',
+  path: '../public/index.html',
   body: mail.toJSON()
 });
 
