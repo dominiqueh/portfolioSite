@@ -8,27 +8,9 @@ var express = require('express'),
     cors = require('cors'),
     path = require('path'),
     port = process.env.PORT || 80,
-    mongoose = require('mongoose'),
-//     var helper = require('sendgrid').mail
-  
-// from_email = new helper.Email("test@example.com")
-// to_email = new helper.Email("test@example.com")
-// subject = "Sending with SendGrid is Fun"
-// content = new helper.Content("text/plain", "and easy to do anywhere, even with Node.js")
-// mail = new helper.Mail(from_email, subject, to_email, content)
+    mongoose = require('mongoose') 
+    sendgrid = require('sendgrid')('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')
 
-// var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
-// var request = sg.emptyRequest({
-//   method: 'POST',
-//   path: '/v3/mail/send',
-//   body: mail.toJSON()
-// });
-
-// sg.API(request, function(error, response) {
-//   console.log(response.statusCode)
-//   console.log(response.body)
-//   console.log(response.headers)
-// })
 
 var sampleModel = require('./models/sampleSchema.js')
 var SampeSchema = sampleModel.SampeSchema
@@ -61,40 +43,18 @@ app.get("/", function(req, res) {
 })
 
 // SENDGRID
-// app.post("/sendMessage", function (req, res) {
-// 	var payload = req.body;
-// 	payload.to = "dominiquehorner@gmail.com"
-// 	sendgrid.send(payload,function (err,json) {
-// 		if (err) {
-// 			return res.send("FAIL")
-// 		} else {
-// 			res.send("SUCCESS!!!")
-// 		}
-// 	})
-// })
-
-// using SendGrid's v3 Node.js Library
-// https://github.com/sendgrid/sendgrid-nodejs
-var helper = require('sendgrid').mail
-  
-from_email = new helper.Email("test@example.com")
-to_email = new helper.Email("dominiquehorner@gmail.com")
-subject = "Sending with SendGrid is Fun"
-content = new helper.Content("text/plain", "and easy to do anywhere, even with Node.js")
-mail = new helper.Mail(from_email, subject, to_email, content)
-
-var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
-var request = sg.emptyRequest({
-  method: 'POST',
-  path: '../public/index.html',
-  body: mail.toJSON()
-});
-
-sg.API(request, function(error, response) {
-  console.log(response.statusCode)
-  console.log(response.body)
-  console.log(response.headers)
+app.post("/sendMessage", function (req, res) {
+    var payload = req.body
+    payload.to = "dominiquehorner@gmail.com"
+    sendgrid.send(payload,function (err,json) {
+        if (err) {
+            return res.send("FAIL")
+        } else {
+            res.send("SUCCESS!!!")
+        }
+    })
 })
+
 
 // =+==+==+==+==+==+==+==+==+==+==+==+==
 // Creating Server and Listening for Connections
