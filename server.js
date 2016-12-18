@@ -46,39 +46,23 @@ app.get("/", function(req, res) {
 //  =+==+==+==+==+==+==+==+==+==+==+==+==
 
 var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
 
-var router = express.Router();
-app.use('/sayHello', router);
-router.post('/', handleSayHello); // handle the route at yourdomain.com/sayHello
+var transporter = nodemailer.createTransport(smtpTransport({
+   service: 'Gmail',
+   auth: {
+       user: 'dominiquehorner@gmail.com',
+       pass: '47vizzini',
+   }
+}));
 
-function handleSayHello(req, res) {
-    var transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: 'dominiquehorner@gmail.com', // Your email id
-            pass: '47vizzini' // Your password
-            // Ask Dana about environment variables
-        }
-    });
-
-var text = 'Hello world from \n\n' + req.body.name;
-
-var mailOptions = {
-    name: 'john smith',
-    from: 'portfolio_contact@gmail.com>', // sender address
-    to: 'd@destination.com', // list of receivers
-    text: text //, // plaintext body
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        console.log(error);
-        res.json({yo: 'error'});
-    }else{
-        console.log('Message sent: ' + info.response);
-        res.json({yo: info.response});
-    };
+transporter.sendMail({
+   from: email,
+   subject: name,
+   text: text,
 });
+
+transporter.close();
 
 // =+==+==+==+==+==+==+==+==+==+==+==+==
 // Creating Server and Listening for Connections
