@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900" rel="stylesheet"/>
 </head>
 
-<body ng-controller="MainDHController">
+<!-- <body ng-controller="MainDHController"> -->
 
   <div class="">
     <!-- ============== NAVBAR ============== -->
@@ -215,21 +215,21 @@
                   <div class="vr">
                   </div>
                   <!-- ============== CONTACT - form ============== -->
-                  <form method="post" ng-submit="sendMessage(name,email,message)" class="uk-form" id="form">
+                  <form method="post" submit=transporter.sendMail() class="uk-form" id="form">
                     <div class="name" id="contact-content">
                       <label for="name" class="required">Name    //</label>
-                      <input type="text" class="uk-width-1-1" placeholder="Enter your name" name="name" id="name" required title="Please enter your name" ng-model="name" />
+                      <input type="text" class="uk-width-1-1" placeholder="Enter your name" name="name" id="name" title="Please enter your name"/>
                     </div>
                     <br />
                     <div class="email">
                       <label for="email" class="required">Email    //</label>
-                      <input class="uk-width-1-1" type="email" placeholder="you@example.com" name="email" id="email" required ng-model="email" />
+                      <input class="uk-width-1-1" type="email" placeholder="you@example.com" name="email" id="from" />
                     </div>
                     <br />
                     <div class="message">
-                      <label for="bio">Message    //</label>
+                      <label for="text">Message  //</label>
                       <br />
-                      <textarea name="message" id="message" rows="5" cols="30" ng-model="message" class="uk-width-1-1" placeholder="Message content goes here.. "></textarea>
+                      <textarea name="message" id="text" rows="5" cols="30" ng-model="message" class="uk-width-1-1" placeholder="Message content goes here.. "></textarea>
                     </div>
                     <br />
                     <div>

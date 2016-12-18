@@ -9,7 +9,6 @@ var express = require('express'),
     path = require('path'),
     port = process.env.PORT || 80,
     mongoose = require('mongoose') 
-    sendgrid = require('sendgrid')('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')
 
 
 var sampleModel = require('./models/sampleSchema.js')
@@ -42,19 +41,44 @@ app.get("/", function(req, res) {
     })
 })
 
-// SENDGRID
-app.post("/sendMessage", function (req, res) {
-    var payload = req.body
-    payload.to = "dominiquehorner@gmail.com"
-    sendgrid.send(payload,function (err,json) {
-        if (err) {
-            return res.send("FAIL")
-        } else {
-            res.send("SUCCESS!!!")
-        }
-    })
-})
+//  =+==+==+==+==+==+==+==+==+==+==+==+==
+//  Nodemailer
+//  =+==+==+==+==+==+==+==+==+==+==+==+==
 
+var nodemailer = require('nodemailer');
+
+var router = express.Router();
+app.use('/sayHello', router);
+router.post('/', handleSayHello); // handle the route at yourdomain.com/sayHello
+
+function handleSayHello(req, res) {
+    var transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'dominiquehorner@gmail.com', // Your email id
+            pass: '47vizzini' // Your password
+            // Ask Dana about environment variables
+        }
+    });
+
+var text = 'Hello world from \n\n' + req.body.name;
+
+var mailOptions = {
+    name: 'john smith',
+    from: 'portfolio_contact@gmail.com>', // sender address
+    to: 'd@destination.com', // list of receivers
+    text: text //, // plaintext body
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+        console.log(error);
+        res.json({yo: 'error'});
+    }else{
+        console.log('Message sent: ' + info.response);
+        res.json({yo: info.response});
+    };
+});
 
 // =+==+==+==+==+==+==+==+==+==+==+==+==
 // Creating Server and Listening for Connections
