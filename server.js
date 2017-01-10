@@ -8,9 +8,14 @@ var express = require('express'),
     cors = require('cors'),
     path = require('path'),
     port = process.env.PORT || 80,
-    mongoose = require('mongoose') 
+    mongoose = require('mongoose')
 
-
+// var smtpTransport = nodemailer.createTransport("SMTP",{
+//         service: "Gmail",
+//         auth: {
+//
+//         }
+//     });
 var sampleModel = require('./models/sampleSchema.js')
 var SampeSchema = sampleModel.SampeSchema
 var Sample = sampleModel.Sample
@@ -40,29 +45,6 @@ app.get("/", function(req, res) {
         root: "../public/index.html"
     })
 })
-
-//  =+==+==+==+==+==+==+==+==+==+==+==+==
-//  Nodemailer
-//  =+==+==+==+==+==+==+==+==+==+==+==+==
-
-var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
-
-var transporter = nodemailer.createTransport(smtpTransport({
-   service: 'Gmail',
-   auth: {
-       user: 'dominiquehorner@gmail.com',
-       pass: '47vizzini',
-   }
-}));
-
-transporter.sendMail({
-   from: email,
-   subject: name,
-   text: text,
-});
-
-transporter.close();
 
 // =+==+==+==+==+==+==+==+==+==+==+==+==
 // Creating Server and Listening for Connections
